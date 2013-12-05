@@ -35,8 +35,9 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/TAD_Arvore2.o \
-	${OBJECTDIR}/main.o
+	${OBJECTDIR}/TAD_Arvore.o \
+	${OBJECTDIR}/Utilizacao_Arvore.o \
+	${OBJECTDIR}/testeArvore.o
 
 
 # C Compiler Flags
@@ -63,15 +64,20 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/trabalhoarvore: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.c} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/trabalhoarvore ${OBJECTFILES} ${LDLIBSOPTIONS}
 
-${OBJECTDIR}/TAD_Arvore2.o: TAD_Arvore2.c 
+${OBJECTDIR}/TAD_Arvore.o: TAD_Arvore.c 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
-	$(COMPILE.c) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/TAD_Arvore2.o TAD_Arvore2.c
+	$(COMPILE.c) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/TAD_Arvore.o TAD_Arvore.c
 
-${OBJECTDIR}/main.o: main.c 
+${OBJECTDIR}/Utilizacao_Arvore.o: Utilizacao_Arvore.c 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
-	$(COMPILE.c) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/main.o main.c
+	$(COMPILE.c) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/Utilizacao_Arvore.o Utilizacao_Arvore.c
+
+${OBJECTDIR}/testeArvore.o: testeArvore.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.c) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/testeArvore.o testeArvore.c
 
 # Subprojects
 .build-subprojects:

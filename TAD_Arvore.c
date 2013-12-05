@@ -91,7 +91,7 @@ int insere(arv arvore,elemento elem_pai,elemento e){
 void imprime(arv arvore){
 
     arv p;
-    printf("%c\n",arvore->info);
+    printf("%s\n",arvore->info);
     for (p=arvore->filho; p!=NULL; p=p->irmao)
     imprime(p);
 }
@@ -132,3 +132,24 @@ void impressaoPrefixa( arv r,int tipo) {
     }
 }
 
+
+
+int contarIrmaos(arv r){
+	int cont = 0;
+	if(r != NULL){
+		cont = 1;
+		if(r->irmao != NULL){
+			cont += contarIrmaos(r->irmao);
+		}
+		return cont;
+	}
+}
+
+int contarFilhos(arv r){
+		int cont;
+		
+		if(r != NULL){
+			cont = contarIrmaos(r->irmao);
+		}
+		return cont;
+}
