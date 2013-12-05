@@ -39,12 +39,13 @@ main() {
      	//clrscr();
 		incluir();
         //printf("altura da arvore = %d\n",altura(arv1));
-        //impressaoPrefixa(arv1,0);
-        printf("filhos = %d\n",contarFilhos(arv1));
+        impressaoPrefixa(arv1,0);
+        //printf("filhos = %d\n",contarFilhos(arv1));
+        //printf("filhos = %d\n",contarFilhos(arv1));
 
 	} while (1);
-	
-	
+
+
 }
 
 

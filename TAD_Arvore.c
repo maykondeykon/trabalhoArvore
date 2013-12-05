@@ -117,7 +117,7 @@ void impressaoInfixa( arv r) {
 
 void impressaoPrefixa( arv r,int tipo) {
     char marc[10] = "";
-    int i;
+    int i,f;
 
     for(i= 0;i <= tipo;i++){
 
@@ -126,7 +126,8 @@ void impressaoPrefixa( arv r,int tipo) {
 
 
     if (r != NULL) {
-        printf( "%s %s\n",marc,r->info);
+        f = contarFilhos(r);
+        printf( "%s %s filhos = %d\n",marc,r->info,f);
         impressaoPrefixa( r->filho,tipo+1);
         impressaoPrefixa( r->irmao,tipo);
     }
@@ -136,20 +137,18 @@ void impressaoPrefixa( arv r,int tipo) {
 
 int contarIrmaos(arv r){
 	int cont = 0;
-	if(r != NULL){
-		cont = 1;
-		if(r->irmao != NULL){
-			cont += contarIrmaos(r->irmao);
-		}
-		return cont;
-	}
+	if (r != NULL) {
+         cont++;
+         cont += contarIrmaos(r->irmao);
+    }
+    return cont;
 }
 
 int contarFilhos(arv r){
 		int cont;
-		
+
 		if(r != NULL){
-			cont = contarIrmaos(r->irmao);
+			cont = contarIrmaos(r->filho);
 		}
 		return cont;
 }
