@@ -66,18 +66,18 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/trabalhoarvore: ${OBJECTFILES}
 
 ${OBJECTDIR}/TAD_Arvore.o: TAD_Arvore.c 
 	${MKDIR} -p ${OBJECTDIR}
-	${RM} $@.d
-	$(COMPILE.c) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/TAD_Arvore.o TAD_Arvore.c
+	${RM} "$@.d"
+	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/TAD_Arvore.o TAD_Arvore.c
 
 ${OBJECTDIR}/Utilizacao_Arvore.o: Utilizacao_Arvore.c 
 	${MKDIR} -p ${OBJECTDIR}
-	${RM} $@.d
-	$(COMPILE.c) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/Utilizacao_Arvore.o Utilizacao_Arvore.c
+	${RM} "$@.d"
+	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Utilizacao_Arvore.o Utilizacao_Arvore.c
 
 ${OBJECTDIR}/testeArvore.o: testeArvore.c 
 	${MKDIR} -p ${OBJECTDIR}
-	${RM} $@.d
-	$(COMPILE.c) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/testeArvore.o testeArvore.c
+	${RM} "$@.d"
+	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/testeArvore.o testeArvore.c
 
 # Subprojects
 .build-subprojects:
